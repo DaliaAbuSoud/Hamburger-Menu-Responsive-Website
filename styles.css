@@ -1,0 +1,212 @@
+#header {
+    background-color: rgb(239, 235, 235);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: 60px;
+    padding: 0px 10px;
+}
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.logo {
+    height: 36px;
+}
+
+.menu-button {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hamburger-menu {
+    height: 36px;
+}
+
+#first-section {
+    background-image: url(./assets/spices.jpg);
+    height: 650px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-text {
+    color: white;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 42px;
+}
+.button {
+    background-color: rgba(255, 255, 255, 0.38);
+    border-width: 3px;
+    border-radius: 30px;
+    border-style: bold;
+    color: rgb(37, 37, 37);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 26px;
+    padding: 3px 60px 3px 60px;
+}
+
+#second-section {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 20% 30% 8% 42%;
+    grid-template-rows: auto auto;
+    background-color: rgb(184, 183, 183);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px 50px 0px;
+}
+#second-section p {
+    margin: 1px;
+}
+.pics-container {
+    text-align: right;
+    margin-right: 20px;
+}
+.pics {
+    height: 55px;
+}
+.world-text {
+    margin-right: 170px;
+}
+
+#footer {
+    background-color: rgb(109, 109, 109);
+}
+.footer-text {
+    margin: 0px 0px 0px 30px;
+    color: white;
+    font-size: small;
+    height: 35px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: left;
+}
+
+#side-panel {
+    width: 160px;
+    height: 100%;
+    position: fixed;
+    z-index: 9001;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(236, 141, 52, 0.534);
+    transform: translateX(160px);
+    transition: transform 0.8s;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+#shroud-of-darkness {
+    background-color: rgb(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 9000;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+}
+
+.on #side-panel {
+    transition-property: transform;
+    transform: translateX(0);
+    transition-duration: 0.25s;
+    visibility: visible;
+}
+
+.on #shroud-of-darkness {
+    visibility: visible;
+}
+
+#navbar {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar div {
+    margin: 20px 20px;
+}
+#X-container {
+    display: flex;
+    justify-content: flex-end;
+}
+#X-container a {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #header {
+        height: 50px;
+    }
+    .header-imgs {
+        height: 25px;
+        margin: 10px 10px 5px 10px;
+    }
+    .hamburger-menu {
+        height: 25px;
+        margin: 10px 10px 5px 10px;
+    }
+    #first-section {
+        background-size: 768px;
+        height: 350px;
+    }
+    .welcome-text {
+        font-size: 28px;
+    }
+    .button {
+        font-size: 20px;
+    }
+    #second-section {
+        height: 280px;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto auto auto auto;
+        font-size: 14px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0px 10px 0px;
+        row-gap: 10px;
+    }
+    #second-section p {
+        margin-right: 10px;
+    }
+
+    .pics-container {
+        text-align: center;
+        margin-right: 0px;
+    }
+    .pics {
+        height: 35px;
+    }
+    .world-text {
+        margin-right: 0px;
+    }
+    #footer {
+        margin-top: 0px;
+    }
+    .footer-text {
+        height: 20px;
+        margin: 0px 0px 0px 5px;
+        font-size: 10px;
+    }
+}
